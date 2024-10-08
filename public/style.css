@@ -1,0 +1,84 @@
+неизмененный css
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: rgb(213, 235, 194);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  h1, h2 {
+    text-align: center;
+    color: rgb(72, 74, 73);
+  }
+  .habit-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+/* Кнопки */
+  button {
+    width: 100px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .complete-btn {
+    background-color: #55a2a2;
+  }
+  .complete-btn:hover {
+    background-color: #218838;
+  }
+  .complete-btn.completed {
+    background-color: green;
+  }
+  .delete-btn {
+    background-color: #dc3545;
+  }
+  .delete-btn:hover {
+    background-color: #7e0c18;
+  }
+  .habit-button {
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+  }
+  /* Список привычек */
+  ul {
+    list-style:none;
+    padding: 0;
+  }
+  li {
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+    border: 3px solid #ddd;
+  }
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .habit-checkboxes {
+    display: flex;
+  }
+
+
+  
+  
+ 
+  
