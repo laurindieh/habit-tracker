@@ -6,7 +6,7 @@ const habits = [];
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+
 
 // Получение всех привычек
 app.get('/api/habits', (req, res) => {
