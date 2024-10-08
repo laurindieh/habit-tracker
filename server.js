@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const PORT = 5001;
+const PORT = 5000;
 const habits = [];
 
 app.use(cors());
@@ -53,5 +53,5 @@ app.post('/api/habits/:id/day/:dayIndex', (req, res) => {
   res.status(200).json(habit); 
 });
 
-// Запуск сервера 5001 порт 
+// Запуск сервера 5000 порт 
 app.listen(PORT);
