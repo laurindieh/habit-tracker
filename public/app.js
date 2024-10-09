@@ -49,7 +49,7 @@ function renderHabits(habits) {
 
 // Отмечаем день для привычки
 function markDay(habitId, dayIndex, isChecked) {
-  fetch(`http://localhost:5001/api/habits/${habitId}/day/${dayIndex}`, {
+  fetch(`/api/habits/${habitId}/day/${dayIndex}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ completed: isChecked }) 
@@ -59,7 +59,7 @@ function markDay(habitId, dayIndex, isChecked) {
 
 // Получение привычек с сервера
 function fetchHabits() {
-  fetch('http://localhost:5001/api/habits')
+  fetch('/api/habits')
     .then(response => {
       if (!response.ok) throw new Error('Network response was not ok');
       return response.json();
@@ -71,7 +71,7 @@ function fetchHabits() {
 addHabitBtn.addEventListener('click', () => {
   const name = habitNameInput.value.trim();
   if (name) {
-    fetch('http://localhost:5001/api/habits', {
+    fetch('/api/habits', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, dailyProgress: Array(30).fill(false) })
@@ -87,13 +87,13 @@ addHabitBtn.addEventListener('click', () => {
 
 // Удаление привычки
 function deleteHabit(id) {
-  fetch(`http://localhost:5001/api/habits/${id}`, { method: 'DELETE' })
+  fetch(`/api/habits/${id}`, { method: 'DELETE' })
     .then(fetchHabits);
 }
 
 // Завершение привычки
 function completeHabit(habitId, button, habitName) {
-  fetch(`http://localhost:5001/api/habits/${habitId}/complete`, { method: 'POST' })
+  fetch(`/api/habits/${habitId}/complete`, { method: 'POST' })
     .then(() => {
       button.classList.add('completed'); 
       button.disabled = true; 
